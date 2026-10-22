@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_save"
+        android:icon="@drawable/ic_heart_outline"
+        android:title="@string/menu_save"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_share"
+        android:title="@string/menu_share"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_report"
+        android:title="@string/menu_report_this_ad"
+        app:showAsAction="never" />
+</menu>

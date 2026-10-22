@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/space_l"
+            android:paddingEnd="@dimen/space_l"
+            android:paddingStart="@dimen/space_l"
+            android:paddingTop="40dp">
+            <TextView
+                style="@style/Text.Heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_kitaab_corner"
+                android:textColor="@color/green" />
+            <TextView
+                style="@style/Text.Display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:text="@string/login_welcome_back" />
+            <TextView
+                style="@style/Text.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/login_log_in_to_chat_with_seller" />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Kitaab.TextInput"
+                android:id="@+id/tilPhoneOrEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/login_phone_or_email"
+                android:layout_marginTop="@dimen/space_xl"
+                app:placeholderText="@string/login_03xx_xxxxxxx">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPhoneOrEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Kitaab.TextInput"
+                android:id="@+id/tilPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/login_password"
+                android:layout_marginTop="@dimen/space_m"
+                app:endIconMode="password_toggle"
+                app:placeholderText="@string/login_at_least_8_characters">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                style="@style/Text.Link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="6dp"
+                android:text="@string/login_forgot_password" />
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Kitaab.Button.Filled"
+                android:id="@+id/btnLogIn"
+                android:layout_marginTop="@dimen/space_l"
+                android:text="@string/login_log_in" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="22dp"
+                android:layout_marginTop="22dp"
+                android:orientation="horizontal">
+                <View
+                    style="@style/Divider"
+                    android:layout_width="0dp"
+                    android:layout_weight="1" />
+                <TextView
+                    style="@style/Text.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_12"
+                    android:layout_marginStart="@dimen/space_12"
+                    android:text="@string/login_or" />
+                <View
+                    style="@style/Divider"
+                    android:layout_width="0dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Kitaab.Button.Outlined"
+                android:id="@+id/btnContinueWithGoogle"
+                android:text="@string/login_continue_with_google" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <TextView
+                style="@style/Text.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/space_l"
+                android:padding="@dimen/space_s"
+                android:text="@string/login_new_here_make_an_account"
+                android:textColor="@color/green"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/Widget.Kitaab.AppBar"
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.appbar.MaterialToolbar
+                style="@style/Widget.Kitaab.Toolbar"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationContentDescription="@string/sign_up_back"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:title="@string/home_all_shelves" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <ScrollView
+            android:id="@+id/scrollContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:padding="14dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_category" />
+        </ScrollView>
+        <include
+            layout="@layout/layout_nav_browse" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

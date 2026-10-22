@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ScrollView
+            android:id="@+id/scrollContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/space_l">
+                <!-- header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingEnd="@dimen/space_12"
+                    android:paddingStart="@dimen/page_margin"
+                    android:paddingTop="@dimen/space_12">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            style="@style/Text.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home_assalam_o_alaikum_ali" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="2dp"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_pin" />
+                            <TextView
+                                style="@style/Text.Heading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/space_xs"
+                                android:text="@string/home_gulberg_lahore" />
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_expand" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <FrameLayout
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true">
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:contentDescription="@string/home_notifications"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_bell" />
+                        <View
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:background="@drawable/bg_badge"
+                            android:layout_gravity="top|end"
+                            android:layout_marginEnd="@dimen/space_12"
+                            android:layout_marginTop="11dp" />
+                    </FrameLayout>
+                </LinearLayout>
+                <!-- search -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/bg_search"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/page_margin"
+                    android:layout_marginStart="@dimen/page_margin"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal"
+                    android:paddingEnd="@dimen/space_s"
+                    android:paddingStart="@dimen/space_m">
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_search"
+                        android:tint="@color/ink_soft" />
+                    <TextView
+                        style="@style/Text.Body"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/home_title_author_or_isbn"
+                        android:textColor="@color/ink_faint"
+                        android:textSize="15sp" />
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/bg_circle_tint"
+                        android:padding="@dimen/space_s"
+                        android:src="@drawable/ic_tune"
+                        android:tint="@color/green" />
+                </LinearLayout>
+                <!-- banner -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_banner"
+                    android:gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/page_margin"
+                    android:layout_marginStart="@dimen/page_margin"
+                    android:layout_marginTop="18dp"
+                    android:orientation="horizontal"
+                    android:padding="18dp">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            style="@style/Text.Heading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="2dp"
+                            android:text="@string/home_semester_over_those_textbo" />
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Widget.Kitaab.Button.Filled"
+                            android:id="@+id/btnPostAnAd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="@dimen/space_12"
+                            android:text="@string/home_post_an_ad" />
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="96dp"
+                        android:layout_height="76dp"
+                        android:importantForAccessibility="no"
+                        android:layout_marginStart="@dimen/space_s"
+                        android:src="@drawable/art_book_stack" />
+                </LinearLayout>
+                <!-- categories -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:layout_marginTop="26dp"
+                    android:orientation="horizontal"
+                    android:paddingEnd="@dimen/space_12"
+                    android:paddingStart="@dimen/page_margin">
+                    <TextView
+                        style="@style/Text.Heading"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/home_browse_by_shelf" />
+                    <TextView
+                        style="@style/Text.Link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_all_shelves" />
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCategoryPill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:layout_marginTop="@dimen/space_12"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="@dimen/page_margin"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/item_category_pill" />
+                <!-- near you -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:layout_marginTop="26dp"
+                    android:orientation="horizontal"
+                    android:paddingEnd="@dimen/space_12"
+                    android:paddingStart="@dimen/page_margin">
+                    <TextView
+                        style="@style/Text.Heading"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/home_fresh_near_you" />
+                    <TextView
+                        style="@style/Text.Link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_see_all" />
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBookCardSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:layout_marginTop="@dimen/space_12"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    android:paddingEnd="14dp"
+                    android:paddingStart="@dimen/page_margin"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="6"
+                    tools:listitem="@layout/item_book_card_small" />
+                <!-- popular -->
+                <TextView
+                    style="@style/Text.Heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:paddingEnd="@dimen/page_margin"
+                    android:paddingStart="@dimen/page_margin"
+                    android:text="@string/home_everyone_s_looking_at" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBookCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_12"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingEnd="14dp"
+                    android:paddingStart="14dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/item_book_card" />
+            </LinearLayout>
+        </ScrollView>
+        <include
+            layout="@layout/layout_nav_home" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

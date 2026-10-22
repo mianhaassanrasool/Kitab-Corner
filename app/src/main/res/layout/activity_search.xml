@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/page_margin"
+            android:paddingStart="@dimen/page_margin"
+            android:paddingTop="@dimen/space_12">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_search"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingEnd="@dimen/space_m"
+                android:paddingStart="@dimen/space_m">
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_search"
+                    android:tint="@color/ink_soft" />
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="@string/home_title_author_or_isbn"
+                    android:imeOptions="actionSearch"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="@drawable/btn_primary"
+                android:contentDescription="@string/search_filters"
+                android:layout_marginStart="10dp"
+                android:padding="14dp"
+                android:src="@drawable/ic_tune"
+                android:tint="@color/on_green" />
+        </LinearLayout>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:layout_marginTop="14dp"
+            android:paddingEnd="@dimen/space_12"
+            android:paddingStart="@dimen/page_margin"
+            android:scrollbars="none">
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipSpacingHorizontal="8dp"
+                app:chipSpacingVertical="8dp"
+                app:singleLine="true"
+                app:singleSelection="true">
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Kitaab.Chip"
+                    android:id="@+id/chipAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:checked="true"
+                    android:text="@string/search_all" />
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Kitaab.Chip"
+                    android:id="@+id/chipTextbooks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/search_textbooks" />
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Kitaab.Chip"
+                    android:id="@+id/chipNovels"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/search_novels" />
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Kitaab.Chip"
+                    android:id="@+id/chipUrduAdab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/search_urdu_adab" />
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Kitaab.Chip"
+                    android:id="@+id/chipSelfHelp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/search_self_help" />
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Kitaab.Chip"
+                    android:id="@+id/chipKids"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/search_kids" />
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/page_margin"
+            android:paddingStart="@dimen/page_margin">
+            <TextView
+                style="@style/Text.Caption"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/search_148_books_in_lahore" />
+            <TextView
+                style="@style/Text.Link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_newest_first" />
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_expand" />
+        </LinearLayout>
+        <ScrollView
+            android:id="@+id/scrollContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBookRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:paddingBottom="@dimen/space_12"
+                android:paddingEnd="@dimen/page_margin"
+                android:paddingStart="@dimen/page_margin"
+                android:paddingTop="@dimen/space_12"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="7"
+                tools:listitem="@layout/item_book_row" />
+        </ScrollView>
+        <include
+            layout="@layout/layout_nav_browse" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

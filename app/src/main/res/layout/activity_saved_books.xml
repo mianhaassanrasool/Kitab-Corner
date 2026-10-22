@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/Widget.Kitaab.AppBar"
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.appbar.MaterialToolbar
+                style="@style/Widget.Kitaab.Toolbar"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationContentDescription="@string/sign_up_back"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:title="@string/saved_books_saved_books" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <ScrollView
+            android:id="@+id/scrollContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/space_12"
+                android:paddingEnd="@dimen/page_margin"
+                android:paddingStart="@dimen/page_margin"
+                android:paddingTop="@dimen/space_xs">
+                <TextView
+                    style="@style/Text.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_12"
+                    android:text="@string/saved_books_4_books_we_ll_tell_you_if" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBookRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/item_book_row" />
+            </LinearLayout>
+        </ScrollView>
+        <include
+            layout="@layout/layout_nav_me" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

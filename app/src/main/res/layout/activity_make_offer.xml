@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/Widget.Kitaab.AppBar"
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.appbar.MaterialToolbar
+                style="@style/Widget.Kitaab.Toolbar"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationContentDescription="@string/sign_up_back"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:title="@string/book_detail_make_an_offer" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <ScrollView
+            android:id="@+id/scrollContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBookRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:padding="@dimen/page_margin"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_book_row" />
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/page_margin"
+            android:paddingEnd="@dimen/page_margin"
+            android:paddingStart="@dimen/page_margin">
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Kitaab.TextInput"
+                android:id="@+id/tilYourOffer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/make_offer_your_offer"
+                android:layout_marginTop="0dp"
+                app:prefixText="@string/make_offer_rs">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etYourOffer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:text="@string/make_offer_1050"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_12"
+                app:chipSpacingHorizontal="8dp"
+                app:chipSpacingVertical="8dp"
+                app:singleLine="true"
+                app:singleSelection="true">
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Kitaab.Chip"
+                    android:id="@+id/chipRs1000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/make_offer_rs_1_000" />
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Kitaab.Chip"
+                    android:id="@+id/chipRs1050"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:checked="true"
+                    android:text="@string/make_offer_rs_1_050" />
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Kitaab.Chip"
+                    android:id="@+id/chipRs1100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/make_offer_rs_1_100" />
+            </com.google.android.material.chip.ChipGroup>
+            <TextView
+                style="@style/Text.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:text="@string/make_offer_asking_price_is_rs_1_200_s" />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Kitaab.TextInput"
+                android:id="@+id/tilAddANoteOptional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/make_offer_add_a_note_optional"
+                android:layout_marginTop="@dimen/space_m"
+                app:placeholderText="@string/make_offer_i_can_pick_it_up_from_gulb">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etAddANoteOptional"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Kitaab.Button.Filled"
+                android:id="@+id/btnSendOffer"
+                android:layout_marginTop="@dimen/page_margin"
+                android:text="@string/make_offer_send_offer" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

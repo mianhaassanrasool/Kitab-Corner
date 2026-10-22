@@ -1,98 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:clickable="true"
     android:focusable="true"
-    android:orientation="vertical"
-    android:tag="go:book_detail">
-
+    android:layout_margin="6dp"
+    android:orientation="vertical">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="190dp">
-
-        <include
+        <FrameLayout
             android:id="@+id/cover"
-            layout="@layout/view_cover"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_cover"
+            android:backgroundTint="#1F5C4D">
+            <View
+                android:layout_width="6dp"
+                android:layout_height="match_parent"
+                android:background="#2E000000" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingEnd="@dimen/space_s"
+                android:paddingStart="14dp"
+                android:paddingTop="@dimen/space_12">
+                <View
+                    android:layout_width="18dp"
+                    android:layout_height="2dp"
+                    android:background="#CCF5F0E6"
+                    android:layout_marginBottom="6dp" />
+                <TextView
+                    android:id="@+id/cover_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:autoSizeMaxTextSize="16sp"
+                    android:autoSizeMinTextSize="7sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="serif"
+                    android:gravity="top"
+                    android:layout_weight="1"
+                    android:textColor="@color/cover_text"
+                    android:textStyle="bold"
+                    tools:text="Atomic Habits" />
+                <TextView
+                    android:id="@+id/cover_author"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoSizeMaxTextSize="11sp"
+                    android:autoSizeMinTextSize="5sp"
+                    android:autoSizeTextType="uniform"
+                    android:layout_marginEnd="36dp"
+                    android:letterSpacing="0.08"
+                    android:maxLines="1"
+                    android:textColor="#CCF5F0E6"
+                    tools:text="JAMES CLEAR" />
+            </LinearLayout>
+        </FrameLayout>
         <ImageView
             android:layout_width="34dp"
             android:layout_height="34dp"
-            android:layout_gravity="top|end"
-            android:layout_margin="8dp"
             android:background="@drawable/bg_fab_white"
-            android:contentDescription="Save"
+            android:contentDescription="@string/row_book_card_save"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/space_s"
             android:padding="7dp"
-            android:src="@drawable/selector_heart"
-            android:tag="toggle" />
+            android:src="@drawable/ic_heart_outline" />
     </FrameLayout>
-
     <TextView
-        android:id="@+id/title"
-tools:text="Atomic Habits"
         style="@style/Text"
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:ellipsize="end"
         android:fontFamily="serif"
+        android:layout_marginTop="10dp"
         android:maxLines="1"
         android:textSize="15sp"
-        android:textStyle="bold" />
-
+        android:textStyle="bold"
+        tools:text="Atomic Habits" />
     <TextView
-        android:id="@+id/author"
-tools:text="James Clear"
         style="@style/Text.Caption"
+        android:id="@+id/author"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ellipsize="end"
-        android:maxLines="1" />
-
+        android:maxLines="1"
+        tools:text="James Clear" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
         android:gravity="center_vertical"
+        android:layout_marginTop="6dp"
         android:orientation="horizontal">
-
         <TextView
-            android:id="@+id/price"
-tools:text="Rs 1,200"
             style="@style/Text"
+            android:id="@+id/price"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textColor="@color/green"
             android:textSize="15sp"
-            android:textStyle="bold" />
-
+            android:textStyle="bold"
+            tools:text="Rs 1,200" />
         <TextView
             android:id="@+id/condition"
-tools:text="LIKE NEW"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_tag_rust"
+            android:paddingBottom="2dp"
+            android:paddingEnd="6dp"
             android:paddingStart="6dp"
             android:paddingTop="2dp"
-            android:paddingEnd="6dp"
-            android:paddingBottom="2dp"
             android:textColor="@color/rust"
             android:textSize="10sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:text="LIKE NEW" />
     </LinearLayout>
-
     <TextView
-        android:id="@+id/city"
-tools:text="Gulberg, Lahore  ·  2 days ago"
         style="@style/Text.Caption"
+        android:id="@+id/city"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
         android:ellipsize="end"
+        android:layout_marginTop="3dp"
         android:maxLines="1"
-        android:textSize="11sp" />
+        android:textSize="11sp"
+        tools:text="Gulberg, Lahore  ·  2 days ago" />
 </LinearLayout>

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Day palette. Night overrides live in values-night/colors.xml -->
     <color name="paper">#F5F0E6</color>
     <color name="surface">#FFFCF6</color>
+    <color name="surface_variant">#EBE6DA</color>
+    <color name="surface_overlay">#E6FFFCF6</color>
     <color name="ink">#20262B</color>
     <color name="ink_soft">#5E6670</color>
     <color name="ink_faint">#9A9FA4</color>
@@ -9,10 +12,16 @@
     <color name="green">#1F5C4D</color>
     <color name="green_dark">#164538</color>
     <color name="green_tint">#E1ECE6</color>
+    <color name="on_green">#F5F0E6</color>
     <color name="rust">#C2552F</color>
+    <color name="rust_fill">#C2552F</color>
     <color name="rust_tint">#F6E1D6</color>
     <color name="mustard">#D9A441</color>
     <color name="mustard_tint">#F8ECCC</color>
+    <color name="mustard_text">#8A6512</color>
     <color name="danger">#B3261E</color>
     <color name="white">#FFFFFF</color>
+    <color name="cover_text">#F5F0E6</color>
+    <color name="splash_bg">#1F5C4D</color>
+    <color name="splash_accent">#D9A441</color>
 </resources>

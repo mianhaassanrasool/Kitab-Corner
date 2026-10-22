@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_view_profile"
+        android:title="@string/menu_view_seller_profile"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_mute"
+        android:title="@string/menu_mute_chat"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_block"
+        android:title="@string/menu_block_user"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_report_user"
+        android:title="@string/menu_report_user"
+        app:showAsAction="never" />
+</menu>

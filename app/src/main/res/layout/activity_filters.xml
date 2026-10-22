@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/Widget.Kitaab.AppBar"
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.appbar.MaterialToolbar
+                style="@style/Widget.Kitaab.Toolbar"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:menu="@menu/menu_filters"
+                app:navigationContentDescription="@string/filters_close"
+                app:navigationIcon="@drawable/ic_close"
+                app:title="@string/search_filters" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <ScrollView
+            android:id="@+id/scrollContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/page_margin"
+                android:paddingEnd="@dimen/page_margin"
+                android:paddingStart="@dimen/page_margin">
+                <TextView
+                    style="@style/Text.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/filters_category" />
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:chipSpacingHorizontal="8dp"
+                        app:chipSpacingVertical="8dp"
+                        app:singleLine="true"
+                        app:singleSelection="false">
+                        <com.google.android.material.chip.Chip
+                            style="@style/Widget.Kitaab.Chip"
+                            android:id="@+id/chipTextbooks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:checked="true"
+                            android:text="@string/search_textbooks" />
+                        <com.google.android.material.chip.Chip
+                            style="@style/Widget.Kitaab.Chip"
+                            android:id="@+id/chipNovels"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:text="@string/search_novels" />
+                        <com.google.android.material.chip.Chip
+                            style="@style/Widget.Kitaab.Chip"
+                            android:id="@+id/chipUrduAdab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:text="@string/search_urdu_adab" />
+                        <com.google.android.material.chip.Chip
+                            style="@style/Widget.Kitaab.Chip"
+                            android:id="@+id/chipIslamic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:text="@string/filters_islamic" />
+                        <com.google.android.material.chip.Chip
+                            style="@style/Widget.Kitaab.Chip"
+                            android:id="@+id/chipKids"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:text="@string/search_kids" />
+                        <com.google.android.material.chip.Chip
+                            style="@style/Widget.Kitaab.Chip"
+                            android:id="@+id/chipComics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:text="@string/filters_comics" />
+                    </com.google.android.material.chip.ChipGroup>
+                </HorizontalScrollView>
+                <TextView
+                    style="@style/Text.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_l"
+                    android:text="@string/filters_condition" />
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroup2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:chipSpacingHorizontal="8dp"
+                    app:chipSpacingVertical="8dp"
+                    app:singleLine="false"
+                    app:singleSelection="false">
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Kitaab.Chip"
+                        android:id="@+id/chipNew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/filters_new" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Kitaab.Chip"
+                        android:id="@+id/chipLikeNew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:checked="true"
+                        android:text="@string/filters_like_new" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Kitaab.Chip"
+                        android:id="@+id/chipGood"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:checked="true"
+                        android:text="@string/filters_good" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Kitaab.Chip"
+                        android:id="@+id/chipFair"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/filters_fair" />
+                </com.google.android.material.chip.ChipGroup>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:layout_marginTop="@dimen/space_l"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/Text.Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/filters_price_pkr" />
+                    <TextView
+                        style="@style/Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:text="@string/filters_rs_300_rs_4_000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <com.google.android.material.slider.RangeSlider
+                    android:id="@+id/sliderPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:valueFrom="0"
+                    android:valueTo="10000"
+                    app:thumbColor="@color/green"
+                    app:trackColorActive="@color/green"
+                    app:trackColorInactive="@color/line"
+                    app:values="@array/price_range" />
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Kitaab.TextInput.Dropdown"
+                    android:id="@+id/tilCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/filters_city"
+                    android:layout_marginTop="@dimen/space_12"
+                    app:startIconDrawable="@drawable/ic_pin">
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/etCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:text="@string/filters_lahore_within_10_km" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    style="@style/Text.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_l"
+                    android:text="@string/filters_language" />
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroup3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:chipSpacingHorizontal="8dp"
+                    app:chipSpacingVertical="8dp"
+                    app:singleLine="false"
+                    app:singleSelection="false">
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Kitaab.Chip"
+                        android:id="@+id/chipEnglish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:checked="true"
+                        android:text="@string/filters_english" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Kitaab.Chip"
+                        android:id="@+id/chipUrdu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/filters_urdu" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Kitaab.Chip"
+                        android:id="@+id/chipPunjabi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/filters_punjabi" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Kitaab.Chip"
+                        android:id="@+id/chipArabic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/filters_arabic" />
+                </com.google.android.material.chip.ChipGroup>
+                <TextView
+                    style="@style/Text.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_12"
+                    android:text="@string/filters_sort_by" />
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroup4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:chipSpacingHorizontal="8dp"
+                    app:chipSpacingVertical="8dp"
+                    app:singleLine="false"
+                    app:singleSelection="true">
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Kitaab.Chip"
+                        android:id="@+id/chipNewest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:checked="true"
+                        android:text="@string/filters_newest" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Kitaab.Chip"
+                        android:id="@+id/chipPriceLow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/filters_price_low" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Kitaab.Chip"
+                        android:id="@+id/chipPriceHigh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/filters_price_high" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Kitaab.Chip"
+                        android:id="@+id/chipNearest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/filters_nearest" />
+                </com.google.android.material.chip.ChipGroup>
+                <View
+                    style="@style/Divider"
+                    android:layout_marginTop="@dimen/space_m" />
+                <LinearLayout
+                    style="@style/Row"
+                    android:layout_height="60dp">
+                    <TextView
+                        style="@style/Text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/filters_negotiable_only"
+                        android:textSize="15sp" />
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/switchOption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Row"
+                    android:layout_height="60dp">
+                    <TextView
+                        style="@style/Text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/filters_verified_sellers_only"
+                        android:textSize="15sp" />
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/switchOption2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bar_top"
+            android:padding="@dimen/space_m">
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Kitaab.Button.Filled"
+                android:id="@+id/btnShow63Books"
+                android:text="@string/filters_show_63_books" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

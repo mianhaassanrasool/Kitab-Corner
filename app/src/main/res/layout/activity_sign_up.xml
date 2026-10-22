@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/space_l"
+            android:paddingEnd="@dimen/space_l"
+            android:paddingStart="@dimen/space_l">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/sign_up_back"
+                android:layout_marginStart="-12dp"
+                android:layout_marginTop="@dimen/space_s"
+                android:padding="@dimen/space_12"
+                android:src="@drawable/ic_arrow_back" />
+            <TextView
+                style="@style/Text.Display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_12"
+                android:text="@string/sign_up_let_s_get_you_set_up" />
+            <TextView
+                style="@style/Text.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/sign_up_takes_about_a_minute_buyer" />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Kitaab.TextInput"
+                android:id="@+id/tilFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/sign_up_full_name"
+                android:layout_marginTop="28dp"
+                app:placeholderText="@string/sign_up_e_g_ali_raza">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Kitaab.TextInput"
+                android:id="@+id/tilMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/sign_up_mobile_number"
+                android:layout_marginTop="@dimen/space_m"
+                app:placeholderText="@string/login_03xx_xxxxxxx">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Kitaab.TextInput.Dropdown"
+                android:id="@+id/tilCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/sign_up_city"
+                android:layout_marginTop="@dimen/space_m">
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/etCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:text="@string/sign_up_lahore" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Kitaab.TextInput"
+                android:id="@+id/tilPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/login_password"
+                android:layout_marginTop="@dimen/space_m"
+                app:endIconMode="password_toggle"
+                app:placeholderText="@string/login_at_least_8_characters">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:checked="true" />
+                <TextView
+                    style="@style/Text.Caption"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sign_up_i_m_18_or_older_and_i_agre"
+                    android:textSize="13sp" />
+            </LinearLayout>
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Kitaab.Button.Filled"
+                android:id="@+id/btnCreateAccount"
+                android:layout_marginTop="@dimen/page_margin"
+                android:text="@string/sign_up_create_account" />
+            <TextView
+                style="@style/Text.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/page_margin"
+                android:padding="@dimen/space_s"
+                android:text="@string/sign_up_already_have_one_log_in"
+                android:textColor="@color/green"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

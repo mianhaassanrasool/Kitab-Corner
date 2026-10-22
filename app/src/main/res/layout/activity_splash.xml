@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinatorRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/splash_bg">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="@string/splash_kitaab"
+                android:textColor="@color/on_green"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:layout_marginTop="-6dp"
+                android:text="@string/splash_corner"
+                android:textColor="@color/splash_accent"
+                android:textSize="26sp"
+                android:textStyle="italic" />
+            <View
+                android:layout_width="36dp"
+                android:layout_height="2dp"
+                android:background="@color/splash_accent"
+                android:layout_marginTop="22dp" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="48dp"
+            android:text="@string/splash_pre_loved_books_passed_on"
+            android:textColor="#B3F5F0E6"
+            android:textSize="14sp" />
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

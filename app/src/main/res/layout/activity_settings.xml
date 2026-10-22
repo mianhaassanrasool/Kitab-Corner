@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/Widget.Kitaab.AppBar"
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.appbar.MaterialToolbar
+                style="@style/Widget.Kitaab.Toolbar"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationContentDescription="@string/sign_up_back"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:title="@string/profile_settings" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <ScrollView
+            android:id="@+id/scrollContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/space_l">
+                <TextView
+                    style="@style/Text.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/space_xs"
+                    android:paddingStart="@dimen/page_margin"
+                    android:paddingTop="22dp"
+                    android:text="@string/settings_notifications"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+                <View
+                    style="@style/Divider"
+                    android:layout_marginStart="@dimen/page_margin" />
+                <LinearLayout
+                    style="@style/Row"
+                    android:layout_height="64dp"
+                    android:paddingEnd="@dimen/space_m"
+                    android:paddingStart="@dimen/page_margin">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            style="@style/Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_new_messages"
+                            android:textSize="15sp" />
+                        <TextView
+                            style="@style/Text.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_chats_and_offers_from_buye" />
+                    </LinearLayout>
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/switchOption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+                </LinearLayout>
+                <View
+                    style="@style/Divider"
+                    android:layout_marginStart="@dimen/page_margin" />
+                <LinearLayout
+                    style="@style/Row"
+                    android:layout_height="64dp"
+                    android:paddingEnd="@dimen/space_m"
+                    android:paddingStart="@dimen/page_margin">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            style="@style/Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_price_drops"
+                            android:textSize="15sp" />
+                        <TextView
+                            style="@style/Text.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_on_books_you_saved" />
+                    </LinearLayout>
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/switchOption2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+                </LinearLayout>
+                <View
+                    style="@style/Divider"
+                    android:layout_marginStart="@dimen/page_margin" />
+                <LinearLayout
+                    style="@style/Row"
+                    android:layout_height="64dp"
+                    android:paddingEnd="@dimen/space_m"
+                    android:paddingStart="@dimen/page_margin">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            style="@style/Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_tips_and_offers"
+                            android:textSize="15sp" />
+                        <TextView
+                            style="@style/Text.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_occasional_never_more_than" />
+                    </LinearLayout>
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/switchOption3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false" />
+                </LinearLayout>
+                <View
+                    style="@style/Divider"
+                    android:layout_marginStart="@dimen/page_margin" />
+                <TextView
+                    style="@style/Text.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/space_xs"
+                    android:paddingStart="@dimen/page_margin"
+                    android:paddingTop="22dp"
+                    android:text="@string/settings_privacy"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+                <View
+                    style="@style/Divider"
+                    android:layout_marginStart="@dimen/page_margin" />
+                <LinearLayout
+                    style="@style/Row"
+                    android:layout_height="64dp"
+                    android:paddingEnd="@dimen/space_m"
+                    android:paddingStart="@dimen/page_margin">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            style="@style/Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_show_my_last_seen"
+                            android:textSize="15sp" />
+                        <TextView
+                            style="@style/Text.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_buyers_see_when_you_were_l" />
+                    </LinearLayout>
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/switchOption4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+                </LinearLayout>
+                <View
+                    style="@style/Divider"
+                    android:layout_marginStart="@dimen/page_margin" />
+                <LinearLayout
+                    style="@style/Row"
+                    android:layout_height="64dp"
+                    android:paddingEnd="@dimen/space_m"
+                    android:paddingStart="@dimen/page_margin">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            style="@style/Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_show_phone_on_my_ads"
+                            android:textSize="15sp" />
+                        <TextView
+                            style="@style/Text.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_off_by_default" />
+                    </LinearLayout>
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/switchOption5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false" />
+                </LinearLayout>
+                <View
+                    style="@style/Divider"
+                    android:layout_marginStart="@dimen/page_margin" />
+                <TextView
+                    style="@style/Text.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/space_xs"
+                    android:paddingStart="@dimen/page_margin"
+                    android:paddingTop="22dp"
+                    android:text="@string/settings_app"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+                <View
+                    style="@style/Divider"
+                    android:layout_marginStart="@dimen/page_margin" />
+                <LinearLayout
+                    style="@style/Row"
+                    android:paddingEnd="@dimen/space_m"
+                    android:paddingStart="@dimen/page_margin">
+                    <TextView
+                        style="@style/Text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/book_detail_language"
+                        android:textColor="@color/ink"
+                        android:textSize="15sp" />
+                    <TextView
+                        style="@style/Text.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:text="@string/filters_english"
+                        android:textSize="13sp" />
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_chevron" />
+                </LinearLayout>
+                <View
+                    style="@style/Divider"
+                    android:layout_marginStart="@dimen/page_margin" />
+                <LinearLayout
+                    style="@style/Row"
+                    android:paddingEnd="@dimen/space_m"
+                    android:paddingStart="@dimen/page_margin">
+                    <TextView
+                        style="@style/Text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/settings_default_city"
+                        android:textColor="@color/ink"
+                        android:textSize="15sp" />
+                    <TextView
+                        style="@style/Text.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:text="@string/sign_up_lahore"
+                        android:textSize="13sp" />
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_chevron" />
+                </LinearLayout>
+                <View
+                    style="@style/Divider"
+                    android:layout_marginStart="@dimen/page_margin" />
+                <LinearLayout
+                    style="@style/Row"
+                    android:paddingEnd="@dimen/space_m"
+                    android:paddingStart="@dimen/page_margin">
+                    <TextView
+                        style="@style/Text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/settings_change_password"
+                        android:textColor="@color/ink"
+                        android:textSize="15sp" />
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_chevron" />
+                </LinearLayout>
+                <View
+                    style="@style/Divider"
+                    android:layout_marginStart="@dimen/page_margin" />
+                <LinearLayout
+                    style="@style/Row"
+                    android:paddingEnd="@dimen/space_m"
+                    android:paddingStart="@dimen/page_margin">
+                    <TextView
+                        style="@style/Text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/settings_terms_of_use"
+                        android:textColor="@color/ink"
+                        android:textSize="15sp" />
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_chevron" />
+                </LinearLayout>
+                <View
+                    style="@style/Divider"
+                    android:layout_marginStart="@dimen/page_margin" />
+                <LinearLayout
+                    style="@style/Row"
+                    android:paddingEnd="@dimen/space_m"
+                    android:paddingStart="@dimen/page_margin">
+                    <TextView
+                        style="@style/Text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/settings_privacy_policy"
+                        android:textColor="@color/ink"
+                        android:textSize="15sp" />
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_chevron" />
+                </LinearLayout>
+                <View
+                    style="@style/Divider"
+                    android:layout_marginStart="@dimen/page_margin" />
+                <LinearLayout
+                    style="@style/Row"
+                    android:paddingEnd="@dimen/space_m"
+                    android:paddingStart="@dimen/page_margin">
+                    <TextView
+                        style="@style/Text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/settings_delete_my_account"
+                        android:textColor="@color/danger"
+                        android:textSize="15sp" />
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_chevron" />
+                </LinearLayout>
+                <View
+                    style="@style/Divider"
+                    android:layout_marginStart="@dimen/page_margin" />
+                <TextView
+                    style="@style/Text.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/space_l"
+                    android:text="@string/settings_kitaab_corner_1_0_0" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

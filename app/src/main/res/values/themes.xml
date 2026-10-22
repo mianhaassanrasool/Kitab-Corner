@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.Kitaab" parent="Theme.Material3.Light.NoActionBar">
+    <!-- Material 3 with our own palette. The values flip automatically in dark mode. -->
+    <style name="Theme.Kitaab" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/green</item>
-        <item name="colorPrimaryVariant">@color/green_dark</item>
-        <item name="colorOnPrimary">@color/paper</item>
+        <item name="colorOnPrimary">@color/on_green</item>
+        <item name="colorPrimaryContainer">@color/green_tint</item>
+        <item name="colorOnPrimaryContainer">@color/ink</item>
         <item name="colorSecondary">@color/rust</item>
         <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/rust_tint</item>
+        <item name="colorOnSecondaryContainer">@color/ink</item>
+        <item name="colorTertiary">@color/mustard</item>
+        <item name="colorTertiaryContainer">@color/mustard_tint</item>
+        <item name="colorOnTertiaryContainer">@color/ink</item>
+        <item name="colorError">@color/danger</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/ink</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/ink_soft</item>
+        <item name="colorOutline">@color/ink_faint</item>
+        <item name="colorOutlineVariant">@color/line</item>
+        <item name="colorSurfaceContainerLowest">@color/surface</item>
+        <item name="colorSurfaceContainerLow">@color/surface</item>
+        <item name="colorSurfaceContainer">@color/surface</item>
+        <item name="colorSurfaceContainerHigh">@color/surface_variant</item>
+        <item name="colorSurfaceContainerHighest">@color/surface_variant</item>
+        <item name="android:colorBackground">@color/paper</item>
         <item name="android:windowBackground">@color/paper</item>
         <item name="android:statusBarColor">@color/paper</item>
         <item name="android:navigationBarColor">@color/surface</item>
-        <item name="android:windowLightStatusBar">true</item>
-        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:windowLightStatusBar">@bool/light_bars</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">@bool/light_bars</item>
         <item name="android:textColorPrimary">@color/ink</item>
         <item name="android:textColorHint">@color/ink_faint</item>
+        <item name="colorControlNormal">@color/ink</item>
+        <item name="colorControlActivated">@color/green</item>
     </style>
 </resources>

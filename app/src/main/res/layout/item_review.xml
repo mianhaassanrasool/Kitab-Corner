@@ -1,50 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp"
     android:background="@drawable/bg_card"
+    android:layout_marginBottom="10dp"
     android:orientation="vertical"
     android:padding="14dp">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal">
-
         <TextView
-            android:id="@+id/name"
-tools:text="Hamza T."
             style="@style/Text"
+            android:id="@+id/name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textStyle="bold" />
-
+            android:textStyle="bold"
+            tools:text="Hamza T." />
         <TextView
             android:id="@+id/stars"
-tools:text="★★★★★"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/mustard"
-            android:textSize="13sp" />
+            android:textSize="13sp"
+            tools:text="★★★★★" />
     </LinearLayout>
-
     <TextView
-        android:id="@+id/text"
-tools:text="Exactly as described. Easy to deal with."
         style="@style/Text.Body"
+        android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp" />
-
+        android:layout_marginTop="6dp"
+        tools:text="Exactly as described. Easy to deal with." />
     <TextView
-        android:id="@+id/time"
-tools:text="2 weeks ago"
         style="@style/Text.Caption"
+        android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp" />
+        android:layout_marginTop="6dp"
+        tools:text="2 weeks ago" />
 </LinearLayout>

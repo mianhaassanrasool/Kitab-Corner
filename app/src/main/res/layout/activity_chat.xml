@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/Widget.Kitaab.AppBar"
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.appbar.MaterialToolbar
+                style="@style/Widget.Kitaab.Toolbar"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:contentInsetStartWithNavigation="0dp"
+                app:menu="@menu/menu_chat"
+                app:navigationContentDescription="@string/sign_up_back"
+                app:navigationIcon="@drawable/ic_arrow_back">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_avatar"
+                        android:backgroundTint="#C2552F"
+                        android:fontFamily="serif"
+                        android:gravity="center"
+                        android:text="@string/book_detail_ak"
+                        android:textColor="@color/cover_text"
+                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_12"
+                        android:orientation="vertical">
+                        <TextView
+                            style="@style/Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/book_detail_ayesha_khan"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            style="@style/Text.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/chat_active_10_min_ago"
+                            android:textColor="@color/green"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+        <View
+            style="@style/Divider" />
+        <!-- the book this chat is about -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/surface"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+            <FrameLayout
+                android:id="@+id/cover"
+                android:layout_width="36dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_cover"
+                android:backgroundTint="#1F5C4D">
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent"
+                    android:background="#2E000000" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="@dimen/space_s"
+                    android:paddingStart="14dp"
+                    android:paddingTop="@dimen/space_12">
+                    <View
+                        android:layout_width="18dp"
+                        android:layout_height="2dp"
+                        android:background="#CCF5F0E6"
+                        android:layout_marginBottom="6dp" />
+                    <TextView
+                        android:id="@+id/cover_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:autoSizeMaxTextSize="16sp"
+                        android:autoSizeMinTextSize="7sp"
+                        android:autoSizeStepGranularity="1sp"
+                        android:autoSizeTextType="uniform"
+                        android:fontFamily="serif"
+                        android:gravity="top"
+                        android:layout_weight="1"
+                        android:text="@string/book_detail_atomic_habits"
+                        android:textColor="@color/cover_text"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/cover_author"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoSizeMaxTextSize="11sp"
+                        android:autoSizeMinTextSize="5sp"
+                        android:autoSizeTextType="uniform"
+                        android:letterSpacing="0.08"
+                        android:maxLines="1"
+                        android:text="@string/book_detail_james_clear"
+                        android:textColor="#CCF5F0E6" />
+                </LinearLayout>
+            </FrameLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_12"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:text="@string/book_detail_atomic_habits"
+                    android:textStyle="bold" />
+                <TextView
+                    style="@style/Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/book_detail_rs_1_200"
+                    android:textColor="@color/green"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <TextView
+                style="@style/Text.Link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chat_view_ad" />
+        </LinearLayout>
+        <View
+            style="@style/Divider" />
+        <ScrollView
+            android:id="@+id/scrollContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_m">
+                <TextView
+                    style="@style/Text.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/space_12"
+                    android:text="@string/chat_yesterday" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_bubble_out"
+                    android:layout_gravity="end"
+                    android:maxWidth="270dp"
+                    android:padding="@dimen/space_12"
+                    android:text="@string/chat_hi_is_this_still_available"
+                    android:textColor="@color/on_green" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_bubble_in"
+                    android:layout_marginTop="@dimen/space_s"
+                    android:maxWidth="270dp"
+                    android:padding="@dimen/space_12"
+                    android:text="@string/chat_yes_it_is_still_have_the_d" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_bubble_out"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/space_s"
+                    android:maxWidth="270dp"
+                    android:padding="@dimen/space_12"
+                    android:text="@string/chat_nice_would_you_take_1_050"
+                    android:textColor="@color/on_green" />
+                <!-- offer card -->
+                <LinearLayout
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_card"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/space_s"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+                    <TextView
+                        style="@style/Text.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chat_your_offer"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        style="@style/Text.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/make_offer_rs_1_050"
+                        android:textColor="@color/green" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_tag_mustard"
+                        android:layout_marginTop="6dp"
+                        android:paddingBottom="2dp"
+                        android:paddingEnd="6dp"
+                        android:paddingStart="6dp"
+                        android:paddingTop="2dp"
+                        android:text="@string/chat_waiting_for_reply"
+                        android:textColor="@color/mustard_text"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <TextView
+                    style="@style/Text.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/space_12"
+                    android:layout_marginTop="@dimen/space_m"
+                    android:text="@string/chat_today" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_bubble_in"
+                    android:maxWidth="270dp"
+                    android:padding="@dimen/space_12"
+                    android:text="@string/chat_1_100_and_it_s_yours_i_m_n" />
+                <TextView
+                    style="@style/Text.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_xs"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/chat_4_12_pm"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </ScrollView>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/space_s"
+            android:paddingStart="@dimen/space_m"
+            android:paddingTop="@dimen/space_xs"
+            android:scrollbars="none">
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipSpacingHorizontal="8dp"
+                app:chipSpacingVertical="8dp"
+                app:singleLine="true"
+                app:singleSelection="false">
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Kitaab.Chip.Assist"
+                    android:id="@+id/chipDealAt1100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chat_deal_at_1_100" />
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Kitaab.Chip.Assist"
+                    android:id="@+id/chipWhereCanWeMeet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chat_where_can_we_meet" />
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Kitaab.Chip.Assist"
+                    android:id="@+id/chipCanYouSendMorePhotos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chat_can_you_send_more_photos" />
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bar_top"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_search"
+                android:hint="@string/chat_write_a_message"
+                android:importantForAutofill="no"
+                android:inputType="textCapSentences"
+                android:layout_weight="1"
+                android:paddingEnd="18dp"
+                android:paddingStart="18dp"
+                android:singleLine="true"
+                android:textSize="15sp" />
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_circle_green"
+                android:contentDescription="@string/chat_send"
+                android:layout_marginStart="@dimen/space_s"
+                android:padding="13dp"
+                android:src="@drawable/ic_send" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

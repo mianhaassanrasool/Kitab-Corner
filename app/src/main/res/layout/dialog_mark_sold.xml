@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/surface"
+    android:orientation="vertical"
+    android:padding="@dimen/space_l">
+    <TextView
+        style="@style/Text.Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mark_sold_mark_as_sold" />
+    <TextView
+        style="@style/Text.Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xs"
+        android:text="@string/mark_sold_buyers_will_no_longer_find" />
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Kitaab.TextInput"
+        android:id="@+id/tilFinalPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/mark_sold_final_price"
+        android:layout_marginTop="@dimen/space_m"
+        app:prefixText="@string/make_offer_rs">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etFinalPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="@string/mark_sold_1100" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:layout_marginTop="@dimen/space_m"
+        android:orientation="horizontal">
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Kitaab.Button.Text"
+            android:id="@+id/btnNotYet"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="@string/mark_sold_not_yet" />
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Kitaab.Button.Filled"
+            android:id="@+id/btnYesItSSold"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="@dimen/space_s"
+            android:text="@string/mark_sold_yes_it_s_sold" />
+    </LinearLayout>
+</LinearLayout>

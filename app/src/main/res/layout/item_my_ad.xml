@@ -1,102 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="12dp"
     android:background="@drawable/bg_card"
+    android:layout_marginBottom="@dimen/space_12"
     android:orientation="vertical"
-    android:padding="12dp">
-
+    android:padding="@dimen/space_12">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clickable="true"
         android:focusable="true"
-        android:orientation="horizontal"
-        android:tag="go:book_detail">
-
-        <include
+        android:orientation="horizontal">
+        <FrameLayout
             android:id="@+id/cover"
-            layout="@layout/view_cover"
             android:layout_width="64dp"
-            android:layout_height="88dp" />
-
+            android:layout_height="88dp"
+            android:background="@drawable/bg_cover"
+            android:backgroundTint="#1F5C4D">
+            <View
+                android:layout_width="6dp"
+                android:layout_height="match_parent"
+                android:background="#2E000000" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingEnd="@dimen/space_s"
+                android:paddingStart="14dp"
+                android:paddingTop="@dimen/space_12">
+                <View
+                    android:layout_width="18dp"
+                    android:layout_height="2dp"
+                    android:background="#CCF5F0E6"
+                    android:layout_marginBottom="6dp" />
+                <TextView
+                    android:id="@+id/cover_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:autoSizeMaxTextSize="16sp"
+                    android:autoSizeMinTextSize="7sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="serif"
+                    android:gravity="top"
+                    android:layout_weight="1"
+                    android:textColor="@color/cover_text"
+                    android:textStyle="bold"
+                    tools:text="Dune" />
+                <TextView
+                    android:id="@+id/cover_author"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoSizeMaxTextSize="11sp"
+                    android:autoSizeMinTextSize="5sp"
+                    android:autoSizeTextType="uniform"
+                    android:letterSpacing="0.08"
+                    android:maxLines="1"
+                    android:textColor="#CCF5F0E6"
+                    tools:text="AUTHOR" />
+            </LinearLayout>
+        </FrameLayout>
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="@dimen/space_12"
             android:layout_weight="1"
             android:orientation="vertical">
-
             <TextView
-                android:id="@+id/title"
-tools:text="Dune"
                 style="@style/Text"
+                android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:fontFamily="serif"
                 android:maxLines="1"
                 android:textSize="16sp"
-                android:textStyle="bold" />
-
+                android:textStyle="bold"
+                tools:text="Dune" />
             <TextView
-                android:id="@+id/price"
-tools:text="Rs 1,100"
                 style="@style/Text"
+                android:id="@+id/price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:textColor="@color/green"
                 android:textSize="15sp"
-                android:textStyle="bold" />
-
+                android:textStyle="bold"
+                tools:text="Rs 1,100" />
             <TextView
-                android:id="@+id/stats"
-tools:text="128 views  ·  9 chats"
                 style="@style/Text.Caption"
+                android:id="@+id/stats"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="6dp" />
-
+                android:layout_marginTop="6dp"
+                tools:text="128 views  ·  9 chats" />
             <TextView
                 android:id="@+id/status"
-tools:text="ACTIVE"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
                 android:background="@drawable/bg_tag_green"
+                android:layout_marginTop="6dp"
+                android:paddingBottom="2dp"
+                android:paddingEnd="6dp"
                 android:paddingStart="6dp"
                 android:paddingTop="2dp"
-                android:paddingEnd="6dp"
-                android:paddingBottom="2dp"
                 android:textColor="@color/green"
                 android:textSize="10sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:text="ACTIVE" />
         </LinearLayout>
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="@dimen/space_12"
         android:orientation="horizontal">
-
-        <TextView
-            style="@style/Btn.Small"
-            android:text="Edit"
-            android:tag="go:sell" />
-
-        <TextView
-            style="@style/Btn.Small"
-            android:layout_marginStart="8dp"
-            android:text="Mark as sold" />
-
-        <TextView
-            style="@style/Btn.Small"
-            android:layout_marginStart="8dp"
-            android:text="Boost"
-            android:textColor="@color/rust" />
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Kitaab.Button.Small"
+            android:text="@string/profile_edit" />
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Kitaab.Button.Small"
+            android:layout_marginStart="@dimen/space_s"
+            android:text="@string/row_my_ad_mark_as_sold" />
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Kitaab.Button.Small"
+            android:layout_marginStart="@dimen/space_s"
+            android:text="@string/row_my_ad_boost" />
     </LinearLayout>
 </LinearLayout>

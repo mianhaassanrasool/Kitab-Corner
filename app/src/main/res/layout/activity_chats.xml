@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            style="@style/Text.Display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/page_margin"
+            android:paddingStart="@dimen/page_margin"
+            android:paddingTop="@dimen/space_m"
+            android:text="@string/chats_chats" />
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:paddingEnd="@dimen/page_margin"
+            android:paddingStart="@dimen/page_margin"
+            app:chipSpacingHorizontal="8dp"
+            app:chipSpacingVertical="8dp"
+            app:singleLine="true"
+            app:singleSelection="true">
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.Kitaab.Chip"
+                android:id="@+id/chipAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:checked="true"
+                android:text="@string/search_all" />
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.Kitaab.Chip"
+                android:id="@+id/chipBuying"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="@string/chats_buying" />
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.Kitaab.Chip"
+                android:id="@+id/chipSelling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="@string/chats_selling" />
+        </com.google.android.material.chip.ChipGroup>
+        <ScrollView
+            android:id="@+id/scrollContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="6"
+                tools:listitem="@layout/item_chat" />
+        </ScrollView>
+        <include
+            layout="@layout/layout_nav_chats" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

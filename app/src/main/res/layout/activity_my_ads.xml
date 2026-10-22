@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/Widget.Kitaab.AppBar"
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.appbar.MaterialToolbar
+                style="@style/Widget.Kitaab.Toolbar"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationContentDescription="@string/sign_up_back"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:title="@string/my_ads_my_ads" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/page_margin"
+            android:paddingStart="@dimen/page_margin"
+            app:chipSpacingHorizontal="8dp"
+            app:chipSpacingVertical="8dp"
+            app:singleLine="true"
+            app:singleSelection="true">
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.Kitaab.Chip"
+                android:id="@+id/chipActive3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:checked="true"
+                android:text="@string/my_ads_active_3" />
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.Kitaab.Chip"
+                android:id="@+id/chipSold2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="@string/my_ads_sold_2" />
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.Kitaab.Chip"
+                android:id="@+id/chipDrafts1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="@string/my_ads_drafts_1" />
+        </com.google.android.material.chip.ChipGroup>
+        <ScrollView
+            android:id="@+id/scrollContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMyAd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:padding="@dimen/page_margin"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_my_ad" />
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bar_top"
+            android:padding="@dimen/space_m">
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Kitaab.Button.Accent"
+                android:id="@+id/btnPostAnotherBook"
+                android:text="@string/my_ads_post_another_book" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

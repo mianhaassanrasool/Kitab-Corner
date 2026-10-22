@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/Widget.Kitaab.AppBar"
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.appbar.MaterialToolbar
+                style="@style/Widget.Kitaab.Toolbar"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationContentDescription="@string/filters_close"
+                app:navigationIcon="@drawable/ic_close"
+                app:title="@string/sell_book_sell_a_book" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <ScrollView
+            android:id="@+id/scrollContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/space_l"
+                android:paddingEnd="@dimen/page_margin"
+                android:paddingStart="@dimen/page_margin">
+                <!-- photos -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="104dp"
+                            android:layout_height="104dp"
+                            android:background="@drawable/bg_dashed"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:src="@drawable/ic_camera" />
+                            <TextView
+                                style="@style/Text.Caption"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/space_xs"
+                                android:text="@string/sell_book_add_photo" />
+                        </LinearLayout>
+                        <FrameLayout
+                            android:layout_width="104dp"
+                            android:layout_height="104dp"
+                            android:background="@drawable/bg_photo_slot"
+                            android:layout_marginStart="10dp" />
+                        <FrameLayout
+                            android:layout_width="104dp"
+                            android:layout_height="104dp"
+                            android:background="@drawable/bg_photo_slot"
+                            android:layout_marginStart="10dp" />
+                        <FrameLayout
+                            android:layout_width="104dp"
+                            android:layout_height="104dp"
+                            android:background="@drawable/bg_photo_slot"
+                            android:layout_marginStart="10dp" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <TextView
+                    style="@style/Text.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_s"
+                    android:text="@string/sell_book_up_to_6_photos_the_first_o" />
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Kitaab.TextInput"
+                    android:id="@+id/tilTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/sell_book_title"
+                    android:layout_marginTop="@dimen/space_m"
+                    app:placeholderText="@string/sell_book_name_of_the_book">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:importantForAutofill="no"
+                        android:inputType="textCapWords" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Kitaab.TextInput"
+                    android:id="@+id/tilAuthor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/sell_book_author"
+                    android:layout_marginTop="@dimen/space_m"
+                    app:placeholderText="@string/sell_book_who_wrote_it">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAuthor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:importantForAutofill="no"
+                        android:inputType="textCapWords" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Kitaab.TextInput.Dropdown"
+                    android:id="@+id/tilShelf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/book_detail_shelf"
+                    android:layout_marginTop="@dimen/space_m">
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/etShelf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    style="@style/Text.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sell_book_condition" />
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:chipSpacingHorizontal="8dp"
+                    app:chipSpacingVertical="8dp"
+                    app:singleLine="false"
+                    app:singleSelection="true">
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Kitaab.Chip"
+                        android:id="@+id/chipNew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/filters_new" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Kitaab.Chip"
+                        android:id="@+id/chipLikeNew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:checked="true"
+                        android:text="@string/filters_like_new" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Kitaab.Chip"
+                        android:id="@+id/chipGood"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/filters_good" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Kitaab.Chip"
+                        android:id="@+id/chipFair"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/filters_fair" />
+                </com.google.android.material.chip.ChipGroup>
+                <TextView
+                    style="@style/Text.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/sell_book_like_new_no_marks_no_loose" />
+                <TextView
+                    style="@style/Text.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/book_detail_language" />
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroup2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:chipSpacingHorizontal="8dp"
+                    app:chipSpacingVertical="8dp"
+                    app:singleLine="true"
+                    app:singleSelection="true">
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Kitaab.Chip"
+                        android:id="@+id/chipEnglish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:checked="true"
+                        android:text="@string/filters_english" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Kitaab.Chip"
+                        android:id="@+id/chipUrdu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/filters_urdu" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Kitaab.Chip"
+                        android:id="@+id/chipOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/sell_book_other" />
+                </com.google.android.material.chip.ChipGroup>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Kitaab.TextInput"
+                    android:id="@+id/tilPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/sell_book_price"
+                    android:layout_marginTop="@dimen/space_m"
+                    app:prefixText="@string/make_offer_rs">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/sell_book_0"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:textSize="15sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <LinearLayout
+                    style="@style/Row"
+                    android:layout_height="52dp">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            style="@style/Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sell_book_price_is_negotiable"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/switchOption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Kitaab.TextInput"
+                    android:id="@+id/tilDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/sell_book_description"
+                    android:layout_marginTop="@dimen/space_xs"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="500"
+                    app:placeholderText="@string/sell_book_edition_any_markings_why_y">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:importantForAutofill="no"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:maxLength="500"
+                        android:minLines="4" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    style="@style/Text.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xs"
+                    android:text="@string/sell_book_where_can_buyers_meet_you" />
+                <LinearLayout
+                    style="@style/Input"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_pin" />
+                    <TextView
+                        style="@style/Text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_s"
+                        android:layout_weight="1"
+                        android:text="@string/sell_book_gulberg_iii_lahore"
+                        android:textSize="15sp" />
+                    <TextView
+                        style="@style/Text.Link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sell_book_change" />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Row"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="6dp">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            style="@style/Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sell_book_show_my_phone_number"
+                            android:textSize="15sp" />
+                        <TextView
+                            style="@style/Text.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sell_book_off_means_buyers_can_only" />
+                    </LinearLayout>
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/switchOption2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bar_top"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_m">
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Kitaab.Button.Outlined"
+                android:id="@+id/btnSaveDraft"
+                android:layout_width="0dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:text="@string/sell_book_save_draft" />
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Kitaab.Button.Filled"
+                android:id="@+id/btnPostAd"
+                android:layout_width="0dp"
+                android:layout_weight="1.4"
+                android:text="@string/sell_book_post_ad" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

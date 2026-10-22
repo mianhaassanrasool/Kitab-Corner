@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Night palette: same names, darker values -->
+    <color name="paper">#121614</color>
+    <color name="surface">#1B201E</color>
+    <color name="surface_variant">#262C29</color>
+    <color name="surface_overlay">#E61B201E</color>
+    <color name="ink">#ECE8DD</color>
+    <color name="ink_soft">#AEB5B1</color>
+    <color name="ink_faint">#7F8884</color>
+    <color name="line">#2E3633</color>
+    <color name="green">#7DC3AB</color>
+    <color name="green_dark">#5FA58F</color>
+    <color name="green_tint">#1F3A31</color>
+    <color name="on_green">#0E1A15</color>
+    <color name="rust">#E58E6C</color>
+    <color name="rust_tint">#3F2A22</color>
+    <color name="mustard">#E2B55A</color>
+    <color name="mustard_tint">#3A3220</color>
+    <color name="mustard_text">#E7C16B</color>
+    <color name="danger">#F2B8B5</color>
+</resources>

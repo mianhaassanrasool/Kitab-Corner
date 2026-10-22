@@ -9,17 +9,94 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kitaab">
 
-        <!-- One activity renders every screen. The layout to show is passed as an
-             extra, so the launcher intent opens screen_splash by default. -->
         <activity
-            android:name=".ScreenActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.SplashActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.SignUpActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.HomeActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.CategoriesActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.SearchActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.FiltersActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.BookDetailActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.SellerProfileActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.MakeOfferActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.ChatsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.ChatActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.SavedBooksActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.SellBookActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.SellSuccessActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.MyAdsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.ProfileActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.EditProfileActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.NotificationsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

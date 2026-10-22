@@ -1,26 +1,17 @@
-# Kitaab Corner: book marketplace (UI/UX)
+# Kitaab Corner: book marketplace (Task 1: UI and layouts)
 
-Buy and sell pre-loved books locally, in the spirit of OLX. UI is 100% XML.
+Buy and sell pre-loved books locally. Task 1 is the complete look of every screen in XML.
 
 ## Run it
 1. Android Studio > **Open** > select this `KitaabCorner` folder.
-2. Let Gradle sync (needs internet the first time). It uses Gradle 9.4.1 and Android Gradle Plugin 9.2.1, and runs on the JDK that comes with Android Studio.
-3. Pick any emulator or phone (Android 8.0+) and press Run.
+2. Let Gradle sync (internet needed the first time). Gradle 9.4.1, Android Gradle Plugin 9.2.1, JDK from Android Studio.
+3. Run on an emulator or phone (Android 8.0+). The app opens on the Login screen.
 
-## Screens (res/layout/screen_*.xml)
-| Flow | Screens |
-|---|---|
-| Start | splash, login, signup |
-| Discover | home, categories, search, filters |
-| Buy | book_detail, seller, make_offer, chat, chats, saved |
-| Sell | sell, sell_success, my_ads |
-| Account | profile, edit_profile, notifications, settings |
+## What is here
+- `res/layout/activity_*.xml`: 20 screens. `item_*.xml`: list rows. `layout_nav_*.xml`: bottom bar (one per tab). `dialog_*.xml` and `bottom_sheet_sort.xml`: dialogs and sheet.
+- `res/values`: `strings.xml` (all visible text), `colors.xml` and `values-night/colors.xml` (day and dark palettes), `dimens.xml`, `styles.xml`, `themes.xml`.
+- `res/menu`: 6 toolbar menus. `res/drawable`: vector icons and shape drawables.
+- `java/.../ui`: one Activity per screen. They only call `setContentView()`; MainActivity opens the Login screen.
 
-Reusable pieces: `view_cover` (typographic book cover), `view_bottom_nav`, and
-`item_*` row/card layouts. Colours, text styles and button styles live in `res/values`.
-
-## How navigation works without much code
-Layouts carry `android:tag` values that `ScreenActivity.java` reads:
-`go:x` opens screen_x, `root:x` opens it with a cleared back stack, `back` closes,
-`toggle`/`pick` switch chip and heart states, `fill:...` asks `Sample.java` to
-inflate demo books/chats. There is no backend; this submission is the UI/UX layer.
+## Task 1 limits
+Buttons do nothing yet and lists have no adapters. Lists show sample rows only in the Android Studio Layout Editor (`tools:` data). Navigation, adapters and validation are planned for Task 2.
