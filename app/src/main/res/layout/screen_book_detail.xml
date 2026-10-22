@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- cover stage -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:background="@color/green_tint">
+
+                <FrameLayout
+                    android:layout_width="190dp"
+                    android:layout_height="262dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:elevation="10dp"
+                    android:tag="fill:cover:0">
+
+                    <include
+                        android:id="@+id/cover"
+                        layout="@layout/view_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/bg_fab_white"
+                    android:contentDescription="Back"
+                    android:padding="11dp"
+                    android:src="@drawable/ic_arrow_back"
+                    android:tag="back" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="12dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:background="@drawable/bg_fab_white"
+                        android:contentDescription="Share"
+                        android:padding="11dp"
+                        android:src="@drawable/ic_share" />
+
+                    <ImageView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/bg_fab_white"
+                        android:contentDescription="Save"
+                        android:padding="10dp"
+                        android:src="@drawable/selector_heart"
+                        android:tag="toggle" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="14dp"
+                    android:background="#B320262B"
+                    android:paddingStart="8dp"
+                    android:paddingTop="3dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="3dp"
+                    android:text="1 / 4"
+                    android:textColor="@color/paper"
+                    android:textSize="11sp" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_tag_rust"
+                        android:paddingStart="8dp"
+                        android:paddingTop="3dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="3dp"
+                        android:text="LIKE NEW"
+                        android:textColor="@color/rust"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/bg_tag_green"
+                        android:paddingStart="8dp"
+                        android:paddingTop="3dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="3dp"
+                        android:text="NEGOTIABLE"
+                        android:textColor="@color/green"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/Text.Display"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Atomic Habits" />
+
+                <TextView
+                    style="@style/Text.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="by James Clear"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Text.Display"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs 1,200"
+                        android:textColor="@color/green" />
+
+                    <TextView
+                        style="@style/Text.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Rs 2,400 new"
+                        android:textColor="@color/ink_faint"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_pin" />
+
+                    <TextView
+                        style="@style/Text.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="Gulberg III, Lahore  ·  Posted 2 days ago  ·  312 views" />
+                </LinearLayout>
+
+                <View
+                    style="@style/Divider"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    style="@style/Text.Heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="About this copy" />
+
+                <TextView
+                    style="@style/Text.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Read once, never dog-eared. A few pencil underlines in chapter 3 and 4, nothing else. Dust jacket is still on. Bought it from Readings but I already own the Urdu translation, so this one needs a new home." />
+
+                <TextView
+                    style="@style/Text.Heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:text="Details" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_card"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <TextView style="@style/Text.Caption" android:layout_width="110dp" android:layout_height="wrap_content" android:text="Language" android:textSize="13sp" />
+                        <TextView style="@style/Text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="English" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:orientation="horizontal">
+                        <TextView style="@style/Text.Caption" android:layout_width="110dp" android:layout_height="wrap_content" android:text="Binding" android:textSize="13sp" />
+                        <TextView style="@style/Text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Paperback, 320 pages" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:orientation="horizontal">
+                        <TextView style="@style/Text.Caption" android:layout_width="110dp" android:layout_height="wrap_content" android:text="Publisher" android:textSize="13sp" />
+                        <TextView style="@style/Text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Penguin Random House" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:orientation="horizontal">
+                        <TextView style="@style/Text.Caption" android:layout_width="110dp" android:layout_height="wrap_content" android:text="ISBN" android:textSize="13sp" />
+                        <TextView style="@style/Text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="978-0735211292" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:orientation="horizontal">
+                        <TextView style="@style/Text.Caption" android:layout_width="110dp" android:layout_height="wrap_content" android:text="Shelf" android:textSize="13sp" />
+                        <TextView style="@style/Text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Self-help" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- seller -->
+                <TextView
+                    style="@style/Text.Heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:text="Seller" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_card"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="14dp"
+                    android:tag="go:seller">
+
+                    <TextView
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:background="@drawable/bg_avatar"
+                        android:backgroundTint="#C2552F"
+                        android:fontFamily="serif"
+                        android:gravity="center"
+                        android:text="AK"
+                        android:textColor="@color/paper"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ayesha Khan"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:src="@drawable/ic_star" />
+
+                            <TextView
+                                style="@style/Text.Caption"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:text="4.8 (36 reviews)  ·  Member since 2023" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_chevron" />
+                </LinearLayout>
+
+                <!-- safety note -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_banner"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        style="@style/Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Before you pay"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        style="@style/Text.Body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Meet somewhere public, flip through the pages, and pay only when the book is in your hands. We never ask for advance payment."
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/Text.Heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:text="More from Ayesha" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingStart="20dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="24dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:tag="fill:book_row:4:5" >
+                <include layout="@layout/item_book_card" android:layout_width="140dp" android:layout_height="wrap_content" android:layout_marginEnd="14dp" />
+                <include layout="@layout/item_book_card" android:layout_width="140dp" android:layout_height="wrap_content" android:layout_marginEnd="14dp" />
+                <include layout="@layout/item_book_card" android:layout_width="140dp" android:layout_height="wrap_content" android:layout_marginEnd="14dp" />
+            </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                style="@style/Text.Link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="24dp"
+                android:text="Report this ad"
+                android:textColor="@color/ink_faint" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bar_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            style="@style/Btn.Outline"
+            android:layout_width="0dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:tag="go:chat"
+            android:text="Chat" />
+
+        <TextView
+            style="@style/Btn.Primary"
+            android:layout_width="0dp"
+            android:layout_weight="1.4"
+            android:tag="go:make_offer"
+            android:text="Make an offer" />
+    </LinearLayout>
+</LinearLayout>

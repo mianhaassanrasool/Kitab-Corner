@@ -1,0 +1,163 @@
+# ---------- Android / Gradle ----------
+*.iml
+.gradle/
+/local.properties
+/build/
+/app/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.hprof
+bin/
+gen/
+out/
+release/
+keystore.properties
+*.jks
+*.keystore
+
+# ---------- Android Studio / IDE ----------
+.idea/
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.fleet/
+
+# ---------- AI assistant / agent tooling ----------
+# Claude / Anthropic
+.claude/
+.claude-flow/
+.claude-mem/
+claude-mem/
+CLAUDE.md
+CLAUDE.local.md
+.mcp.json
+.agency/
+.skills/
+.commands/
+.agents/
+agents/
+
+# GSD / planning artefacts
+.gsd/
+.planning/
+ROADMAP.md
+STATE.md
+PROJECT.md
+REQUIREMENTS.md
+RESEARCH.md
+REVIEW.md
+PLAN.md
+*-PLAN.md
+*-SUMMARY.md
+*-CONTEXT.md
+*-VERIFICATION.md
+
+# gstack
+.gstack/
+.gbrain/
+
+# Cursor
+.cursor/
+.cursorrules
+.cursorignore
+.cursorindexingignore
+
+# Windsurf / Codeium
+.windsurf/
+.windsurfrules
+.codeium/
+
+# GitHub Copilot
+.github/copilot-instructions.md
+.github/instructions/
+.github/prompts/
+.github/chatmodes/
+.copilot/
+
+# OpenAI Codex / ChatGPT
+.codex/
+AGENTS.md
+AGENT.md
+.openai/
+chatgpt/
+
+# Google Gemini / Jules / Firebender
+.gemini/
+GEMINI.md
+.jules/
+.idx/
+.firebender/
+
+# Aider
+.aider*
+.aiderignore
+
+# Cline / Roo / Kilo
+.cline/
+.clinerules
+.clinerules/
+.roo/
+.roomodes
+.roorules
+.kilocode/
+.kilocodemodes
+
+# Continue / Cody / Tabnine / Amazon Q / Qodo / Sourcegraph
+.continue/
+.continuerc.json
+.cody/
+.tabnine/
+.amazonq/
+.q/
+.qodo/
+.sourcegraph/
+.supermaven/
+.bito/
+
+# Trae / Zed / Junie / Augment / Kiro / Warp / Void
+.trae/
+.rules
+.zed/
+.junie/
+.augment/
+.kiro/
+.warp/
+.void/
+
+# Replit / Bolt / Lovable / v0 / Devin / OpenHands / Goose / Amp
+.replit
+replit.nix
+.bolt/
+.lovable/
+.v0/
+.devin/
+.openhands/
+.goose/
+.goosehints
+.amp/
+.opencode/
+.crush/
+.qwen/
+
+# Stitch / design-tool exports and prompt scratch files
+.stitch/
+DESIGN.md
+design-notes/
+prompts/
+prompt*.txt
+prompt*.md
+scratch/
+scratchpad/
+transcripts/
+*.chat.md
+*.conversation.md
+*.transcript.md
