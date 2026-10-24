@@ -12,5 +12,6 @@ public class SavedBooksActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saved_books);
+        NavBar.bind(this);
     }
 }

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Day palette. Night overrides live in values-night/colors.xml -->
     <color name="paper">#F5F0E6</color>
     <color name="surface">#FFFCF6</color>
     <color name="surface_variant">#EBE6DA</color>

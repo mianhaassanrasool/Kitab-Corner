@@ -36,7 +36,6 @@
                 android:paddingBottom="@dimen/space_l"
                 android:paddingEnd="@dimen/page_margin"
                 android:paddingStart="@dimen/page_margin">
-                <!-- photos -->
                 <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

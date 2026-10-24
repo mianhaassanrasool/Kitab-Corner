@@ -20,7 +20,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <!-- cover stage -->
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="340dp"
@@ -307,7 +306,6 @@
                                 android:text="@string/search_self_help" />
                         </LinearLayout>
                     </LinearLayout>
-                    <!-- seller -->
                     <TextView
                         style="@style/Text.Heading"
                         android:layout_width="match_parent"
@@ -372,7 +370,6 @@
                             android:layout_height="24dp"
                             android:src="@drawable/ic_chevron" />
                     </LinearLayout>
-                    <!-- safety note -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- spacing scale -->
     <dimen name="space_xs">4dp</dimen>
     <dimen name="space_s">8dp</dimen>
     <dimen name="space_12">12dp</dimen>
@@ -9,7 +8,6 @@
     <dimen name="space_l">24dp</dimen>
     <dimen name="space_xl">32dp</dimen>
 
-    <!-- touch targets and shapes -->
     <dimen name="button_height">52dp</dimen>
     <dimen name="icon_button">48dp</dimen>
     <dimen name="corner_field">12dp</dimen>

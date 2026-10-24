@@ -14,4 +14,6 @@ Buy and sell pre-loved books locally. Task 1 is the complete look of every scree
 - `java/.../ui`: one Activity per screen. They only call `setContentView()`; MainActivity opens the Login screen.
 
 ## Task 1 limits
-Buttons do nothing yet and lists have no adapters. Lists show sample rows only in the Android Studio Layout Editor (`tools:` data). Navigation, adapters and validation are planned for Task 2.
+- Login and Sign-up show error text under empty fields; valid input opens Home. The bottom bar tabs, Book detail (Chat, Make an offer), Send offer and Post an ad open their screens.
+- Lists have no adapters yet, so Book detail cannot be reached from a list. Lists show sample rows only in the Android Studio Layout Editor (`tools:` data); on a device they are empty. Chats has an empty-list message.
+- Other buttons, chips, menus and dropdowns do nothing yet. Data, adapters and full validation are planned for Task 2.

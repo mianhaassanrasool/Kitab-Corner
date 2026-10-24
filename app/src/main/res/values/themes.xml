@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Material 3 with our own palette. The values flip automatically in dark mode. -->
     <style name="Theme.Kitaab" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/green</item>
         <item name="colorOnPrimary">@color/on_green</item>

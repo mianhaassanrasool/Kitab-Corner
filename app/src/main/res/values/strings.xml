@@ -262,4 +262,10 @@
     <string name="menu_share">Share</string>
     <string name="menu_share_profile">Share profile</string>
     <string name="menu_view_seller_profile">View seller profile</string>
+    <string name="error_enter_phone_or_email">Enter your phone number or email</string>
+    <string name="error_enter_password">Enter your password</string>
+    <string name="error_enter_name">Enter your full name</string>
+    <string name="error_enter_mobile">Enter your mobile number</string>
+    <string name="empty_chats_title">No chats yet</string>
+    <string name="empty_chats_hint">Message a seller from a book page and the chat will show up here.</string>
 </resources>
